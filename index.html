@@ -7,7 +7,7 @@
   <title>Reflexes - Reflex and Attention Game</title>
 
   <meta name="description"
-        content="Reflexes è un gioco semplice di riflessi, attenzione e velocità con 20 livelli e modalità Turbo.">
+        content="Reflexes è un gioco di riflessi, attenzione e velocità con 20 livelli e modalità Turbo.">
 
   <style>
     * {
@@ -26,47 +26,107 @@
       background: linear-gradient(135deg, #8b0000, #e50937);
       color: white;
       text-align: center;
-      padding: 55px 20px;
+      padding: 38px 20px;
+    }
+
+    .app-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 24px;
+      display: block;
+      margin: 0 auto 15px;
+      box-shadow: 0 5px 16px rgba(0,0,0,0.25);
     }
 
     header h1 {
       margin: 0;
-      font-size: 3.2rem;
+      font-size: 3rem;
     }
 
     header .subtitle {
-      font-size: 1.25rem;
-      margin: 10px 0 0;
+      font-size: 1.2rem;
+      margin: 8px 0 0;
     }
 
     main {
-      max-width: 1050px;
+      max-width: 1100px;
       margin: auto;
       padding: 35px 20px 60px;
     }
 
-    .intro {
+    .card {
       background: white;
       border-radius: 16px;
       padding: 30px;
+      margin-bottom: 30px;
       box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-      text-align: center;
     }
 
-    .intro h2 {
+    h2 {
       margin-top: 0;
+      text-align: center;
       font-size: 2rem;
     }
 
-    .intro p {
-      max-width: 800px;
-      margin: 12px auto;
-      font-size: 1.1rem;
+    h3 {
+      margin-bottom: 8px;
+    }
+
+    .language-block {
+      max-width: 900px;
+      margin: 0 auto 28px;
+    }
+
+    .language-label {
+      font-weight: bold;
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .controls ul {
+      padding-left: 22px;
+      margin-top: 8px;
+    }
+
+    .screenshots {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+      margin-top: 25px;
+    }
+
+    .screenshots figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    .screenshots img {
+      width: 100%;
+      max-width: 390px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    figcaption {
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .play-area {
+      text-align: center;
+      margin-top: 28px;
     }
 
     .play-button {
       display: inline-block;
-      margin-top: 22px;
       padding: 14px 24px;
       background: #01875f;
       color: white;
@@ -80,12 +140,6 @@
       background: #006f4e;
     }
 
-    .coming {
-      margin-top: 35px;
-      text-align: center;
-      color: #666;
-    }
-
     footer {
       text-align: center;
       padding: 25px 15px;
@@ -93,16 +147,17 @@
       font-size: 0.9rem;
     }
 
-    @media (max-width: 600px) {
-      header {
-        padding: 38px 18px;
+    @media (max-width: 750px) {
+      .controls,
+      .screenshots {
+        grid-template-columns: 1fr;
       }
 
       header h1 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
       }
 
-      .intro {
+      .card {
         padding: 22px 18px;
       }
     }
@@ -112,44 +167,138 @@
 <body>
 
   <header>
+    <img
+      src="assets/reflexes_icon.png"
+      alt="Icona Reflexes"
+      class="app-icon">
+
     <h1>Reflexes</h1>
     <p class="subtitle">Reflexes • Attention • Speed</p>
   </header>
 
   <main>
 
-    <section class="intro">
-      <h2>Un gioco semplice. Una sfida sempre più veloce.</h2>
+    <section class="card">
+      <h2>Come si gioca / How to play</h2>
 
-      <p>
-        Reflexes è un gioco di riflessi, attenzione e velocità.
-        In ogni livello devi osservare rapidamente ciò che appare sullo schermo
-        e rispondere nel modo corretto prima che il tempo finisca.
-      </p>
+      <div class="language-block">
+        <div class="language-label">🇮🇹 Italiano</div>
 
-      <p>
-        Ci sono 20 livelli: i primi 10 introducono dieci tipi di gioco,
-        mentre i livelli 11-20 ripropongono le stesse sfide in modalità
-        <strong>Turbo</strong>, più rapida e impegnativa.
-      </p>
+        <p>
+          <strong>Reflexes</strong> è un gioco di riflessi, attenzione e velocità.
+          Il gioco comprende 20 livelli. I livelli da 1 a 10 sono i livelli Standard;
+          i livelli da 11 a 20 ripropongono gli stessi dieci giochi in modalità
+          <strong>Turbo</strong>, più rapida e difficile.
+        </p>
 
-      <p>
-        La grafica è volutamente semplice e immediata:
-        l'obiettivo è giocare, migliorare il punteggio e mettere alla prova
-        riflessi e concentrazione.
-      </p>
+        <p>
+          Prima di iniziare scegli quante prove vuoi effettuare:
+          <strong>2, 4, 6 oppure 10</strong>.
+          Nei livelli Standard le prove sono suddivise tra EASY e HARD.
+          Per ogni prova leggi l'istruzione mostrata nella parte superiore dello
+          schermo e completa il compito prima che il tempo finisca.
+        </p>
 
-      <a class="play-button"
-         href="https://play.google.com/store/apps/details?id=com.francogame.riflessi"
-         target="_blank"
-         rel="noopener">
-        Scarica Reflexes su Google Play
-      </a>
+        <p>
+          Il gioco assegna punti e tiene conto del tempo.
+          In basso puoi vedere il punteggio parziale e totale e il timer della prova.
+        </p>
+      </div>
+
+      <div class="language-block">
+        <div class="language-label">🇬🇧 English</div>
+
+        <p>
+          <strong>Reflexes</strong> is a reflex, attention and speed game.
+          The game contains 20 levels. Levels 1 to 10 are the Standard levels;
+          levels 11 to 20 repeat the same ten games in
+          <strong>Turbo</strong> mode, which is faster and more difficult.
+        </p>
+
+        <p>
+          Before starting, choose how many trials you want to play:
+          <strong>2, 4, 6 or 10</strong>.
+          In Standard levels the selected trials are divided between EASY and HARD.
+          For each trial, read the instruction shown at the top of the screen
+          and complete the task before the timer expires.
+        </p>
+
+        <p>
+          The game awards points and measures your response time.
+          At the bottom of the screen you can see the partial and total score
+          together with the trial timer.
+        </p>
+      </div>
     </section>
 
-    <div class="coming">
-      <p>Più sotto aggiungeremo guida, schermate dei 10 giochi, Turbo e collegamenti social.</p>
-    </div>
+    <section class="card">
+      <h2>Pulsanti principali / Main controls</h2>
+
+      <div class="controls">
+
+        <div>
+          <h3>🇮🇹 Italiano</h3>
+          <ul>
+            <li><strong>START</strong>: inizia dal livello 1 e chiede quante prove vuoi giocare.</li>
+            <li><strong>TURBO</strong>: inizia direttamente dal livello 11.</li>
+            <li><strong>NEXT</strong>: passa al livello successivo quando le prove selezionate sono terminate.</li>
+            <li><strong>BACK</strong>: ricomincia il livello corrente e azzera il punteggio parziale di quel livello.</li>
+            <li><strong>MUTE</strong>: attiva o disattiva i suoni.</li>
+            <li><strong>EXIT</strong>: chiude il gioco.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>🇬🇧 English</h3>
+          <ul>
+            <li><strong>START</strong>: starts from level 1 and asks how many trials you want to play.</li>
+            <li><strong>TURBO</strong>: starts directly from level 11.</li>
+            <li><strong>NEXT</strong>: moves to the next level after the selected trials are completed.</li>
+            <li><strong>BACK</strong>: restarts the current level and resets its partial score.</li>
+            <li><strong>MUTE</strong>: turns sound on or off.</li>
+            <li><strong>EXIT</strong>: closes the game.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Prima di iniziare / Before you start</h2>
+
+      <div class="screenshots">
+
+        <figure>
+          <img
+            src="assets/intro_screen.jpg"
+            alt="Schermata iniziale di Reflexes">
+
+          <figcaption>
+            Schermata iniziale / Initial screen
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="assets/trials_dialog.jpg"
+            alt="Scelta del numero di prove in Reflexes">
+
+          <figcaption>
+            Scegli 2, 4, 6 o 10 prove / Choose 2, 4, 6 or 10 trials
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <div class="play-area">
+        <a class="play-button"
+           href="https://play.google.com/store/apps/details?id=com.francogame.riflessi"
+           target="_blank"
+           rel="noopener">
+          Scarica Reflexes su Google Play
+        </a>
+      </div>
+    </section>
 
   </main>
 
