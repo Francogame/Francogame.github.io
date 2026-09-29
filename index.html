@@ -3,18 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reflexes</title>
+
+  <title>Reflexes - Reflex and Attention Game</title>
+
+  <meta name="description"
+        content="Reflexes è un gioco semplice di riflessi, attenzione e velocità con 20 livelli e modalità Turbo.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #8b0000, #e50937);
+      color: white;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3.2rem;
+    }
+
+    header .subtitle {
+      font-size: 1.25rem;
+      margin: 10px 0 0;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 35px 20px 60px;
+    }
+
+    .intro {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .intro h2 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    .intro p {
+      max-width: 800px;
+      margin: 12px auto;
+      font-size: 1.1rem;
+    }
+
+    .play-button {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 14px 24px;
+      background: #01875f;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .play-button:hover {
+      background: #006f4e;
+    }
+
+    .coming {
+      margin-top: 35px;
+      text-align: center;
+      color: #666;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 38px 18px;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      .intro {
+        padding: 22px 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Reflexes</h1>
 
-  <p>
-    Sito ufficiale di Reflexes.
-  </p>
+  <header>
+    <h1>Reflexes</h1>
+    <p class="subtitle">Reflexes • Attention • Speed</p>
+  </header>
 
-  <p>
-    Gioco di riflessi, attenzione e velocità.
-  </p>
+  <main>
+
+    <section class="intro">
+      <h2>Un gioco semplice. Una sfida sempre più veloce.</h2>
+
+      <p>
+        Reflexes è un gioco di riflessi, attenzione e velocità.
+        In ogni livello devi osservare rapidamente ciò che appare sullo schermo
+        e rispondere nel modo corretto prima che il tempo finisca.
+      </p>
+
+      <p>
+        Ci sono 20 livelli: i primi 10 introducono dieci tipi di gioco,
+        mentre i livelli 11-20 ripropongono le stesse sfide in modalità
+        <strong>Turbo</strong>, più rapida e impegnativa.
+      </p>
+
+      <p>
+        La grafica è volutamente semplice e immediata:
+        l'obiettivo è giocare, migliorare il punteggio e mettere alla prova
+        riflessi e concentrazione.
+      </p>
+
+      <a class="play-button"
+         href="https://play.google.com/store/apps/details?id=com.francogame.riflessi"
+         target="_blank"
+         rel="noopener">
+        Scarica Reflexes su Google Play
+      </a>
+    </section>
+
+    <div class="coming">
+      <p>Più sotto aggiungeremo guida, schermate dei 10 giochi, Turbo e collegamenti social.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    Reflexes © Francogame
+  </footer>
+
 </body>
 </html>
