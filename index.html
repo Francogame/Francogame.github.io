@@ -49,7 +49,7 @@
     }
 
     main {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
       padding: 35px 20px 60px;
     }
@@ -69,7 +69,7 @@
     }
 
     h3 {
-      margin-bottom: 8px;
+      margin-top: 0;
     }
 
     .language-block {
@@ -140,6 +140,79 @@
       background: #006f4e;
     }
 
+    .games-title {
+      margin: 55px 0 10px;
+      text-align: center;
+      font-size: 2.3rem;
+    }
+
+    .games-intro {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 32px;
+      color: #555;
+      font-size: 1.05rem;
+    }
+
+    .game-card {
+      display: grid;
+      grid-template-columns: minmax(280px, 400px) 1fr;
+      gap: 38px;
+      align-items: center;
+      background: white;
+      border-radius: 18px;
+      padding: 28px;
+      margin-bottom: 34px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    }
+
+    .game-image {
+      text-align: center;
+    }
+
+    .game-image img {
+      width: 100%;
+      max-width: 390px;
+      height: auto;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.16);
+    }
+
+    .game-text h3 {
+      font-size: 1.65rem;
+      margin-bottom: 8px;
+    }
+
+    .english-note {
+      margin: 0 0 18px;
+      color: #666;
+      font-size: 0.95rem;
+      font-style: italic;
+    }
+
+    .translation {
+      padding: 9px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .translation:last-child {
+      border-bottom: none;
+    }
+
+    .translation strong {
+      display: inline-block;
+      min-width: 42px;
+    }
+
+    .extra-note {
+      margin-top: 18px;
+      padding: 14px 16px;
+      background: #fff8dc;
+      border-left: 4px solid #e0a800;
+      border-radius: 8px;
+      font-size: 0.98rem;
+    }
+
     footer {
       text-align: center;
       padding: 25px 15px;
@@ -147,17 +220,23 @@
       font-size: 0.9rem;
     }
 
-    @media (max-width: 750px) {
+    @media (max-width: 800px) {
       .controls,
-      .screenshots {
+      .screenshots,
+      .game-card {
         grid-template-columns: 1fr;
+      }
+
+      .game-image img {
+        max-width: 420px;
       }
 
       header h1 {
         font-size: 2.4rem;
       }
 
-      .card {
+      .card,
+      .game-card {
         padding: 22px 18px;
       }
     }
@@ -178,6 +257,7 @@
 
   <main>
 
+    <!-- INTRODUZIONE -->
     <section class="card">
       <h2>Come si gioca / How to play</h2>
 
@@ -231,6 +311,7 @@
       </div>
     </section>
 
+    <!-- COMANDI -->
     <section class="card">
       <h2>Pulsanti principali / Main controls</h2>
 
@@ -263,6 +344,7 @@
       </div>
     </section>
 
+    <!-- SCREENSHOT INTRODUTTIVI -->
     <section class="card">
       <h2>Prima di iniziare / Before you start</h2>
 
@@ -298,6 +380,260 @@
           Scarica Reflexes su Google Play
         </a>
       </div>
+    </section>
+
+
+    <!-- 10 GIOCHI -->
+    <h2 class="games-title">I 10 giochi Standard</h2>
+
+    <p class="games-intro">
+      L'istruzione originale in inglese è già visibile nella parte superiore
+      di ogni screenshot. A fianco trovi la traduzione nelle principali lingue.
+      Nei giochi che richiedono una dinamica particolare è presente anche una
+      breve spiegazione aggiuntiva.
+    </p>
+
+
+    <!-- GAME 1 -->
+    <section class="game-card">
+      <div class="game-image">
+        <img src="assets/game01_banner.png"
+             loading="lazy"
+             alt="Reflexes Game 1">
+      </div>
+
+      <div class="game-text">
+        <h3>Game 1</h3>
+        <p class="english-note">English instruction: visible in the screenshot.</p>
+
+        <div class="translation">🇮🇹 <strong>IT</strong> Premi tutti i pulsanti del colore NERO.</div>
+        <div class="translation">🇫🇷 <strong>FR</strong> Appuyez sur tous les boutons de couleur NOIRE.</div>
+        <div class="translation">🇪🇸 <strong>ES</strong> Pulsa todos los botones de color NEGRO.</div>
+        <div class="translation">🇩🇪 <strong>DE</strong> Drücke alle SCHWARZEN Tasten.</div>
+        <div class="translation">🇵🇹 <strong>PT</strong> Pressione todos os botões da cor PRETA.</div>
+      </div>
+    </section>
+
+
+    <!-- GAME 2 -->
+    <section class="game-card">
+      <div class="game-image">
+        <img src="assets/game02_banner.png"
+             loading="lazy"
+             alt="Reflexes Game 2">
+      </div>
+
+      <div class="game-text">
+        <h3>Game 2</h3>
+        <p class="english-note">English instruction: visible in the screenshot.</p>
+
+        <div class="translation">🇮🇹 <strong>IT</strong> Premi almeno un pulsante del colore ROSSO.</div>
+        <div class="translation">🇫🇷 <strong>FR</strong> Appuyez sur au moins un bouton ROUGE.</div>
+        <div class="translation">🇪🇸 <strong>ES</strong> Pulsa al menos un botón ROJO.</div>
+        <div class="translation">🇩🇪 <strong>DE</strong> Drücke mindestens eine ROTE Taste.</div>
+        <div class="translation">🇵🇹 <strong>PT</strong> Pressione pelo menos um botão VERMELHO.</div>
+      </div>
+    </section>
+
+
+    <!-- GAME 3 -->
+    <section class="game-card">
+      <div class="game-image">
+        <img src="assets/game03_banner.png"
+             loading="lazy"
+             alt="Reflexes Game 3">
+      </div>
+
+      <div class="game-text">
+        <h3>Game 3</h3>
+        <p class="english-note">English instruction: visible in the screenshot.</p>
+
+        <div class="translation">🇮🇹 <strong>IT</strong> Premi il pulsante del colore ROSSO.</div>
+        <div class="translation">🇫🇷 <strong>FR</strong> Appuyez sur le bouton ROUGE.</div>
+        <div class="translation">🇪🇸 <strong>ES</strong> Pulsa el botón ROJO.</div>
+        <div class="translation">🇩🇪 <strong>DE</strong> Drücke die ROTE Taste.</div>
+        <div class="translation">🇵🇹 <strong>PT</strong> Pressione o botão VERMELHO.</div>
+      </div>
+    </section>
+
+
+    <!-- GAME 4 -->
+    <section class="game-card">
+      <div class="game-image">
+        <img src="assets/game04_banner.png"
+             loading="lazy"
+             alt="Reflexes Game 4">
+      </div>
+
+      <div class="game-text">
+        <h3>Game 4</h3>
+        <p class="english-note">English instruction: visible in the screenshot.</p>
+
+        <div class="translation">🇮🇹 <strong>IT</strong> Premi 1, 2, 3, 4 in sequenza.</div>
+        <div class="translation">🇫🇷 <strong>FR</strong> Appuyez sur 1, 2, 3, 4 dans l'ordre.</div>
+        <div class="translation">🇪🇸 <strong>ES</strong> Pulsa 1, 2, 3, 4 en secuencia.</div>
+        <div class="translation">🇩🇪 <strong>DE</strong> Drücke 1, 2, 3, 4 der Reihe nach.</div>
+        <div class="translation">🇵🇹 <strong>PT</strong> Pressione 1, 2, 3, 4 em sequência.</div>
+      </div>
+    </section>
+
+
+    <!-- GAME 5 -->
+    <section class="game-card">
+      <div class="game-image">
+        <img src="assets/game05_banner.png"
+             loading="lazy"
+             alt="Reflexes Game 5">
+      </div>
+
+      <div class="game-text">
+        <h3>Game 5 — Memory</h3>
+        <p class="english-note">English instruction: visible in the screenshot.</p>
+
+        <div class="translation">🇮🇹 <strong>IT</strong> Memorizza i colori. Quando tutti i pulsanti diventano gialli, premi due pulsanti che prima erano NERI.</div>
+        <div class="translation">🇫🇷 <strong>FR</strong> Mémorisez les couleurs. Lorsque tous les boutons deviennent jaunes, appuyez sur deux boutons qui étaient NOIRS.</div>
+        <div class="translation">🇪🇸 <strong>ES</strong> Memoriza los colores. Cuando todos los botones se vuelvan amarillos, pulsa dos que antes eran NEGROS.</div>
+        <div class="translation">🇩🇪 <strong>DE</strong> Merke dir die Farben. Wenn alle Tasten gelb werden, drücke zwei Tasten, die zuvor SCHWARZ waren.</div>
+        <div class="translation">🇵🇹 <strong>PT</strong> Memorize as cores. Quando todos os botões ficarem amarelos, pressione dois que antes eram PRETOS.</div>
+
+        <div class="extra-note">
+          💡 <strong>Perché lo screenshot è tutto giallo?</strong><br>
+          Prima vengono mostrati i colori originali. Dopo un breve momento
+          tutti i pulsanti diventano gialli: devi ricordare quali avevano
+          il colore richiesto.
+        </div>
+      </div>
+    </section>
+
+
+    <!-- GAME 6 -->
+    <section class="game-card">
+      <div class="game-image">
+        <img src="assets/game06_banner.png"
+             loading="lazy"
+             alt="Reflexes Game 6">
+      </div>
+
+      <div class="game-text">
+        <h3>Game 6</h3>
+        <p class="english-note">English instruction: visible in the screenshot.</p>
+
+        <div class="translation">🇮🇹 <strong>IT</strong> Premi i numeri 1, 2, 3 e 4 nell'ordine corretto.</div>
+        <div class="translation">🇫🇷 <strong>FR</strong> Appuyez sur les nombres 1, 2, 3 et 4 dans le bon ordre.</div>
+        <div class="translation">🇪🇸 <strong>ES</strong> Pulsa los números 1, 2, 3 y 4 en el orden correcto.</div>
+        <div class="translation">🇩🇪 <strong>DE</strong> Drücke die Zahlen 1, 2, 3 und 4 in der richtigen Reihenfolge.</div>
+        <div class="translation">🇵🇹 <strong>PT</strong> Pressione os números 1, 2, 3 e 4 na ordem correta.</div>
+
+        <div class="extra-note">
+          Ogni scelta corretta viene evidenziata mentre continui la sequenza.
+        </div>
+      </div>
+    </section>
+
+
+    <!-- GAME 7 -->
+    <section class="game-card">
+      <div class="game-image">
+        <img src="assets/game07_banner.png"
+             loading="lazy"
+             alt="Reflexes Game 7">
+      </div>
+
+      <div class="game-text">
+        <h3>Game 7 — One by one</h3>
+        <p class="english-note">English instruction: visible in the screenshot.</p>
+
+        <div class="translation">🇮🇹 <strong>IT</strong> I pulsanti appaiono uno alla volta: premi tutti quelli del colore VERDE quando compaiono.</div>
+        <div class="translation">🇫🇷 <strong>FR</strong> Les boutons apparaissent un par un : appuyez sur tous les boutons VERTS lorsqu'ils apparaissent.</div>
+        <div class="translation">🇪🇸 <strong>ES</strong> Los botones aparecen uno a uno: pulsa todos los VERDES cuando aparezcan.</div>
+        <div class="translation">🇩🇪 <strong>DE</strong> Die Tasten erscheinen einzeln: drücke jede GRÜNE Taste, sobald sie erscheint.</div>
+        <div class="translation">🇵🇹 <strong>PT</strong> Os botões aparecem um de cada vez: pressione todos os VERDES quando aparecerem.</div>
+      </div>
+    </section>
+
+
+    <!-- GAME 8 -->
+    <section class="game-card">
+      <div class="game-image">
+        <img src="assets/game08_banner.png"
+             loading="lazy"
+             alt="Reflexes Game 8">
+      </div>
+
+      <div class="game-text">
+        <h3>Game 8 — Moving columns</h3>
+        <p class="english-note">English instruction: visible in the screenshot.</p>
+
+        <div class="translation">🇮🇹 <strong>IT</strong> Le colonne compaiono una alla volta. Premi un pulsante ROSSO quando lo trovi.</div>
+        <div class="translation">🇫🇷 <strong>FR</strong> Les colonnes apparaissent une par une. Appuyez sur un bouton ROUGE lorsque vous en trouvez un.</div>
+        <div class="translation">🇪🇸 <strong>ES</strong> Las columnas aparecen una a una. Pulsa un botón ROJO cuando aparezca.</div>
+        <div class="translation">🇩🇪 <strong>DE</strong> Die Spalten erscheinen nacheinander. Drücke eine ROTE Taste, sobald du eine findest.</div>
+        <div class="translation">🇵🇹 <strong>PT</strong> As colunas aparecem uma de cada vez. Pressione um botão VERMELHO quando aparecer.</div>
+
+        <div class="extra-note">
+          Basta individuare almeno un pulsante del colore richiesto
+          prima che siano passate tutte le colonne.
+        </div>
+      </div>
+    </section>
+
+
+    <!-- GAME 9 -->
+    <section class="game-card">
+      <div class="game-image">
+        <img src="assets/game09_banner.png"
+             loading="lazy"
+             alt="Reflexes Game 9">
+      </div>
+
+      <div class="game-text">
+        <h3>Game 9 — Words & colors</h3>
+        <p class="english-note">English instruction: visible in the screenshot.</p>
+
+        <div class="translation">🇮🇹 <strong>IT</strong> Premi le parole Red, Blue, Gray, Pink in quest'ordine. Conta la parola scritta, non il colore con cui è visualizzata.</div>
+        <div class="translation">🇫🇷 <strong>FR</strong> Appuyez sur les mots Red, Blue, Gray, Pink dans cet ordre. Regardez le mot écrit, pas sa couleur.</div>
+        <div class="translation">🇪🇸 <strong>ES</strong> Pulsa las palabras Red, Blue, Gray, Pink en ese orden. Importa la palabra escrita, no el color con que aparece.</div>
+        <div class="translation">🇩🇪 <strong>DE</strong> Drücke die Wörter Red, Blue, Gray, Pink in dieser Reihenfolge. Entscheidend ist das geschriebene Wort, nicht seine Farbe.</div>
+        <div class="translation">🇵🇹 <strong>PT</strong> Pressione as palavras Red, Blue, Gray, Pink nessa ordem. Vale a palavra escrita, não a cor em que aparece.</div>
+      </div>
+    </section>
+
+
+    <!-- GAME 10 -->
+    <section class="game-card">
+      <div class="game-image">
+        <img src="assets/game10_banner.png"
+             loading="lazy"
+             alt="Reflexes Game 10">
+      </div>
+
+      <div class="game-text">
+        <h3>Game 10 — Random positions</h3>
+        <p class="english-note">English instruction: visible in the screenshot.</p>
+
+        <div class="translation">🇮🇹 <strong>IT</strong> I pulsanti appaiono uno alla volta in ordine casuale: premi tutti quelli del colore ROSSO quando compaiono.</div>
+        <div class="translation">🇫🇷 <strong>FR</strong> Les boutons apparaissent un par un dans un ordre aléatoire : appuyez sur tous les boutons ROUGES.</div>
+        <div class="translation">🇪🇸 <strong>ES</strong> Los botones aparecen uno a uno en orden aleatorio: pulsa todos los ROJOS cuando aparezcan.</div>
+        <div class="translation">🇩🇪 <strong>DE</strong> Die Tasten erscheinen einzeln in zufälliger Reihenfolge: drücke jede ROTE Taste.</div>
+        <div class="translation">🇵🇹 <strong>PT</strong> Os botões aparecem um de cada vez em ordem aleatória: pressione todos os VERMELHOS.</div>
+
+        <div class="extra-note">
+          A differenza del Game 7, qui le posizioni compaiono
+          in ordine casuale.
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TURBO -->
+    <section class="card">
+      <h2>Turbo — Levels 11–20</h2>
+
+      <p style="text-align:center; max-width:850px; margin:auto;">
+        I livelli 11–20 utilizzano gli stessi dieci tipi di gioco,
+        ma con tempi più rapidi e parametri più impegnativi.
+        Per questo non è necessario duplicare altri dieci screenshot.
+      </p>
     </section>
 
   </main>
